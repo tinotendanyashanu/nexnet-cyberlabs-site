@@ -1,19 +1,49 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 const KEY = "nexnet_cookie_consent_v1";
 
 export function CookieBanner() {
   const [open, setOpen] = useState(false);
+  const dialogRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const stored = typeof window !== "undefined" ? window.localStorage.getItem(KEY) : null;
     if (!stored) setOpen(true);
   }, []);
 
+  useEffect(() => {
+    if (open && dialogRef.current) {
+      const focusable = dialogRef.current.querySelectorAll<HTMLElement>("button");
+      focusable[0]?.focus();
+      function trap(e: KeyboardEvent) {
+        if (e.key === "Tab") {
+          const first = focusable[0];
+          const last = focusable[focusable.length - 1];
+          if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          } else if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          }
+        }
+        if (e.key === "Escape") setOpen(false);
+      }
+      window.addEventListener("keydown", trap);
+      return () => window.removeEventListener("keydown", trap);
+    }
+  }, [open]);
+
   if (!open) return null;
   return (
-    <div className="fixed bottom-4 inset-x-0 px-4 z-50">
+    <div
+      className="fixed bottom-4 inset-x-0 px-4 z-50"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Cookie consent"
+      ref={dialogRef}
+    >
       <div className="mx-auto max-w-3xl bg-white/10 backdrop-blur border border-white/15 rounded-2xl p-4 flex flex-col gap-3 md:flex-row md:items-center md:gap-6 shadow-soft">
         <p className="text-sm text-gray-200 leading-relaxed">
           We use minimal, privacy-friendly analytics and essential cookies. Additional tracking will always be opt‑in.
@@ -38,3 +68,4 @@ export function CookieBanner() {
     </div>
   );
 }
+

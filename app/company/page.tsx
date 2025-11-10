@@ -1,3 +1,5 @@
+import { ImageHero } from "@/components/ImageHero";
+
 export const metadata = { title: "Company — NexNet CyberLabs" };
 
 export default function CompanyPage() {
@@ -9,15 +11,28 @@ export default function CompanyPage() {
     "Community Impact — training and upliftment."
   ];
   return (
+    <>
+      <ImageHero
+        title="Company"
+        subtitle="NexNet CyberLabs is an investigations-first security bureau founded in Zimbabwe and operating across Africa and the EU."
+        bgSrc="/images/hero/network-connections.svg"
+        ctaPrimary={{ href: "/about", text: "Learn More" }}
+      />
+    
     <div className="container py-20">
-      <h1 className="text-4xl font-semibold">Company</h1>
-      <p className="mt-4 text-gray-300 max-w-3xl">
-        NexNet CyberLabs is an investigations-first security bureau founded in Zimbabwe and operating across Africa and the EU.
-      </p>
-      <h2 className="text-2xl font-semibold mt-10">Our Pillars</h2>
+      <h2 className="text-2xl font-semibold mt-10">Our Pillars in Action</h2>
       <ul className="grid md:grid-cols-2 gap-4 mt-4">
         {pillars.map(p => <li key={p} className="card">{p}</li>)}
       </ul>
+
+      <h2 className="text-2xl font-semibold mt-10">Responsible Disclosure</h2>
+      <div className="card mt-4">
+        <p className="text-gray-300">
+          We welcome vulnerability reports at <span className="text-brand-teal">security@nexnet.example</span>. 
+          A PGP key will be published on this page.
+        </p>
+      </div>
     </div>
+    </>
   );
 }

@@ -1,55 +1,53 @@
+﻿import Image from "next/image";
+import { Metadata } from "next";
+import { Accordion } from "@/components/Accordion";
+import { PricingTiers } from "@/components/PricingTiers";
+import { ToolingStack } from "@/components/ToolingStack";
 import { ServicesGrid } from "@/components/ServicesGrid";
 
-export const metadata = { title: "Services — NexNet CyberLabs" };
+export const metadata: Metadata = {
+  title: "Services - NexNet CyberLabs",
+  description: "Incident response retainers, DFIR, threat intelligence, assessments, and governance programs."
+};
 
 export default function ServicesPage() {
   return (
-    <div className="container py-20">
-      <h1 className="text-4xl font-semibold">Services</h1>
-      <p className="mt-4 text-gray-300 max-w-3xl">
-        From incident response to governance and training, our services are designed to deliver
-        measurable outcomes with disciplined, repeatable methods.
-      </p>
-      <div className="mt-10">
-        <ServicesGrid detailed />
+    <div className="container py-16 space-y-12">
+      <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+        <Image
+          src="/images/services/cyber-security-bg.svg"
+          alt=""
+          width={1600}
+          height={900}
+          className="w-full h-64 md:h-96 object-cover opacity-40"
+        />
+        <div className="absolute inset-0 bg-gradient-to-tr from-black/80 via-black/70 to-black/50" />
+        <div className="absolute bottom-6 left-6 right-6">
+          <h1 className="text-3xl md:text-5xl font-bold text-white drop-shadow-lg">Service Catalog</h1>
+          <p className="mt-2 text-gray-200 max-w-3xl drop-shadow-md text-lg">
+            Measurable outcomes and disciplined responders across the cyber kill-chain.
+          </p>
+        </div>
       </div>
 
-      <div className="mt-16 space-y-12">
-        <section id="ir" aria-labelledby="ir-title" className="card">
-          <h2 id="ir-title" className="text-2xl font-semibold">Incident Response</h2>
-          <p className="text-gray-300 mt-2">Triage, containment, forensics, recovery. Executive and technical reporting with measurable outcomes.</p>
-          <ul className="list-disc list-inside text-gray-300 mt-3">
-            <li>2h kickoff target; SLA options available</li>
-            <li>Evidence handling & chain-of-custody</li>
-            <li>Root cause analysis & hardening plan</li>
-          </ul>
-        </section>
+      <ServicesGrid detailed />
 
-        <section id="forensics" aria-labelledby="forensics-title" className="card">
-          <h2 id="forensics-title" className="text-2xl font-semibold">Digital Forensics & Investigations</h2>
-          <p className="text-gray-300 mt-2">Court-ready methods, artifacts, and SOPs. Timeline reconstruction, malware analysis, reporting.</p>
-        </section>
+      <PricingTiers />
+      <ToolingStack />
 
-        <section id="intel" aria-labelledby="intel-title" className="card">
-          <h2 id="intel-title" className="text-2xl font-semibold">Threat Intelligence (OSINT & CTI)</h2>
-          <p className="text-gray-300 mt-2">Collection plans, monitoring, and decision-ready notes aligned to your risk register.</p>
-        </section>
-
-        <section id="assess" aria-labelledby="assess-title" className="card">
-          <h2 id="assess-title" className="text-2xl font-semibold">Security Assessments</h2>
-          <p className="text-gray-300 mt-2">Pen tests, red/blue team exercises, and application security reviews with prioritized remediation.</p>
-        </section>
-
-        <section id="grc" aria-labelledby="grc-title" className="card">
-          <h2 id="grc-title" className="text-2xl font-semibold">Governance, Risk & Compliance</h2>
-          <p className="text-gray-300 mt-2">GDPR and ISO 27001 readiness, policies, audits, metrics, and program setup.</p>
-        </section>
-
-        <section id="training" aria-labelledby="training-title" className="card">
-          <h2 id="training-title" className="text-2xl font-semibold">Security Training & Awareness</h2>
-          <p className="text-gray-300 mt-2">Hands-on labs, exec briefings, and behavior-change campaigns tailored to your teams.</p>
-        </section>
-      </div>
+      <section>
+        <h2 className="text-2xl font-semibold">Engagement FAQs</h2>
+        <div className="mt-4">
+          <Accordion
+            items={[
+              { q: "How fast can you mobilize IR?", a: "We begin remote triage within hours post-intake. On-site teams are airborne within 24h depending on visa/logistics." },
+              { q: "Do you provide court-ready reports?", a: "Yes. Chain-of-custody, imaging, and expert testimony preparation are included in DFIR engagements." },
+              { q: "Can you align to our controls framework?", a: "Our findings map to ISO 27001, NIST CSF, PCI DSS, NERC CIP, POPIA, and GDPR requirements." }
+            ]}
+          />
+        </div>
+      </section>
     </div>
   );
 }
+

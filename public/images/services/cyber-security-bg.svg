@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="secGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0B1220;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1F2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0B1220;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#secGrad)"/>
+  
+  <!-- Binary code rain effect -->
+  <g opacity="0.15" fill="#00B3A4" font-family="monospace" font-size="14">
+    <text x="100" y="100">01001001</text>
+    <text x="100" y="130">11010110</text>
+    <text x="100" y="160">00110101</text>
+    
+    <text x="300" y="200">10101010</text>
+    <text x="300" y="230">01110011</text>
+    <text x="300" y="260">11001100</text>
+    
+    <text x="500" y="150">01010101</text>
+    <text x="500" y="180">10011001</text>
+    <text x="500" y="210">00111100</text>
+    
+    <text x="700" y="250">11110000</text>
+    <text x="700" y="280">00001111</text>
+    <text x="700" y="310">10101010</text>
+    
+    <text x="900" y="180">01100110</text>
+    <text x="900" y="210">10011001</text>
+    <text x="900" y="240">01010101</text>
+    
+    <text x="1100" y="220">11001100</text>
+    <text x="1100" y="250">00110011</text>
+    <text x="1100" y="280">10101010</text>
+    
+    <text x="1300" y="160">01111000</text>
+    <text x="1300" y="190">10000111</text>
+    <text x="1300" y="220">01010101</text>
+    
+    <text x="1500" y="200">11110000</text>
+    <text x="1500" y="230">00001111</text>
+    <text x="1500" y="260">10101010</text>
+    
+    <text x="1700" y="140">01100110</text>
+    <text x="1700" y="170">10011001</text>
+    <text x="1700" y="200">00110011</text>
+  </g>
+  
+  <!-- Shield icon in center -->
+  <g transform="translate(860, 440)" opacity="0.2" fill="none" stroke="#00B3A4" stroke-width="2">
+    <path d="M 100 0 L 200 40 L 200 120 Q 200 180 100 200 Q 0 180 0 120 L 0 40 Z"/>
+    <path d="M 70 80 L 90 100 L 130 60" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Hexagon pattern -->
+  <g opacity="0.1" stroke="#00B3A4" stroke-width="1" fill="none">
+    <polygon points="400,800 440,780 480,800 480,840 440,860 400,840"/>
+    <polygon points="500,800 540,780 580,800 580,840 540,860 500,840"/>
+    <polygon points="600,800 640,780 680,800 680,840 640,860 600,840"/>
+    
+    <polygon points="1200,800 1240,780 1280,800 1280,840 1240,860 1200,840"/>
+    <polygon points="1300,800 1340,780 1380,800 1380,840 1340,860 1300,840"/>
+    <polygon points="1400,800 1440,780 1480,800 1480,840 1440,860 1400,840"/>
+  </g>
+  
+  <!-- Scanning lines -->
+  <g opacity="0.2" stroke="#00B3A4" stroke-width="1">
+    <line x1="0" y1="400" x2="1920" y2="400" stroke-dasharray="10,5"/>
+    <line x1="0" y1="600" x2="1920" y2="600" stroke-dasharray="10,5"/>
+  </g>
+  
+  <!-- Corner brackets -->
+  <g opacity="0.3" stroke="#00B3A4" stroke-width="2" fill="none">
+    <!-- Top left -->
+    <path d="M 50 100 L 50 50 L 100 50"/>
+    <!-- Top right -->
+    <path d="M 1820 50 L 1870 50 L 1870 100"/>
+    <!-- Bottom left -->
+    <path d="M 100 1030 L 50 1030 L 50 980"/>
+    <!-- Bottom right -->
+    <path d="M 1870 980 L 1870 1030 L 1820 1030"/>
+  </g>
+</svg>
