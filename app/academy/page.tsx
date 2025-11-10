@@ -344,11 +344,7 @@ export default function AcademyPage() {
         {/* Phase Timeline */}
         <div className="space-y-8">
           {phases.map((phase, idx) => (
-            <GlowCard 
-              key={idx} 
-              className="overflow-hidden cursor-pointer transition-all hover:scale-[1.02]"
-              onClick={() => setSelectedPhase(selectedPhase === idx ? null : idx)}
-            >
+            <GlowCard key={idx} className="overflow-hidden">
               <div className={`h-2 bg-gradient-to-r ${phase.color}`} />
               <div className="p-8">
                 <div className="flex items-start gap-6">
@@ -392,6 +388,7 @@ export default function AcademyPage() {
                     )}
                     
                     <button 
+                      onClick={() => setSelectedPhase(selectedPhase === idx ? null : idx)}
                       className="mt-4 text-brand-teal text-sm font-medium flex items-center gap-2 hover:underline"
                     >
                       {selectedPhase === idx ? "Show Less" : "Show More"}
