@@ -16,7 +16,7 @@ const leadership = [
     focus: "Strategic leadership, innovation, partnerships, and organizational development",
     email: "tinotendanyash@gmail.com",
     linkedin: "linkedin.com/in/tinotenda-nyashanu-90163712b",
-    avatar: "/images/team/tinotenda.png"
+    avatar: "/images/team/Tinotenda.png"
   },
   {
     name: "Nyasha Mutonhori",
