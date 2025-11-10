@@ -220,16 +220,7 @@ export default function GRCPage() {
       </section>
 
       <CTA />
-      <ServiceStructuredData
-        name="Governance, Risk & Compliance"
-        description="Align cybersecurity with international standards through structured risk assessments, audits, and policy development."
-        provider="NexNet CyberLabs"
-        areaServed={["Zimbabwe", "Poland", "Africa", "European Union"]}
-        availableChannel={{
-          serviceUrl: "https://nexnet-cyberlabs.com/services/grc",
-          servicePhone: "+263-86-7700-4321"
-        }}
-      />
+      <ServiceStructuredData slug="grc" />
     </>
   );
 }

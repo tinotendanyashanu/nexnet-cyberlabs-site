@@ -217,16 +217,7 @@ export default function TrainingPage() {
       </section>
 
       <CTA />
-      <ServiceStructuredData
-        name="Security Awareness & Executive Training"
-        description="Customized cybersecurity training programs for technical staff, executives, and general workforce."
-        provider="NexNet CyberLabs"
-        areaServed={["Zimbabwe", "Poland", "Africa", "European Union"]}
-        availableChannel={{
-          serviceUrl: "https://nexnet-cyberlabs.com/services/training",
-          servicePhone: "+263-86-7700-4321"
-        }}
-      />
+      <ServiceStructuredData slug="training" />
     </>
   );
 }

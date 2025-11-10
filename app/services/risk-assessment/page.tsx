@@ -220,16 +220,7 @@ export default function RiskAssessmentPage() {
       </section>
 
       <CTA />
-      <ServiceStructuredData
-        name="Cyber Risk Assessment & Security Audits"
-        description="Organization-wide cyber risk audits to identify vulnerabilities and recommend resilience strategies."
-        provider="NexNet CyberLabs"
-        areaServed={["Zimbabwe", "Poland", "Africa", "European Union"]}
-        availableChannel={{
-          serviceUrl: "https://nexnet-cyberlabs.com/services/risk-assessment",
-          servicePhone: "+263-86-7700-4321"
-        }}
-      />
+      <ServiceStructuredData slug="risk-assessment" />
     </>
   );
 }

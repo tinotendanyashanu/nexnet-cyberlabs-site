@@ -231,14 +231,26 @@ const applicationFields = [
     label: "Current Skill Level", 
     type: "select" as const, 
     required: true,
-    options: ["Beginner - No prior experience", "Novice - Some fundamentals", "Intermediate - 1-2 years", "Advanced - 3+ years"]
+    options: [
+      { value: "beginner", label: "Beginner - No prior experience" },
+      { value: "novice", label: "Novice - Some fundamentals" },
+      { value: "intermediate", label: "Intermediate - 1-2 years" },
+      { value: "advanced", label: "Advanced - 3+ years" }
+    ]
   },
   { 
     name: "track", 
     label: "Preferred Track", 
     type: "select" as const, 
     required: true,
-    options: ["Incident Response", "Digital Forensics", "Threat Intelligence", "Governance & Risk", "AI & Automation", "Undecided - Need guidance"]
+    options: [
+      { value: "incident-response", label: "Incident Response" },
+      { value: "digital-forensics", label: "Digital Forensics" },
+      { value: "threat-intelligence", label: "Threat Intelligence" },
+      { value: "governance-risk", label: "Governance & Risk" },
+      { value: "ai-automation", label: "AI & Automation" },
+      { value: "undecided", label: "Undecided - Need guidance" }
+    ]
   },
   { name: "background", label: "Technical Background", type: "textarea" as const, required: true, placeholder: "Describe your education, work experience, or self-study in cybersecurity or related fields..." },
   { name: "motivation", label: "Why CyberLabs Academy?", type: "textarea" as const, required: true, placeholder: "What drives you to join this program? What do you hope to achieve?" }
@@ -578,7 +590,7 @@ export default function AcademyPage() {
             <Form 
               fields={applicationFields} 
               submitLabel="Submit Application"
-              onSubmit={(data) => {
+              onSubmit={async (data) => {
                 console.log("Academy application:", data);
               }}
             />

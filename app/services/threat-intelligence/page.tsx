@@ -229,16 +229,7 @@ export default function ThreatIntelligencePage() {
         </div>
       </section>
       <CTA />
-      <ServiceStructuredData
-        name="Threat Intelligence & OSINT"
-        description="Strategic and tactical intelligence to stay ahead of emerging threats and adversaries."
-        provider="NexNet CyberLabs"
-        areaServed={["Zimbabwe", "Poland", "Africa", "European Union"]}
-        availableChannel={{
-          serviceUrl: "https://nexnet-cyberlabs.com/services/threat-intelligence",
-          servicePhone: "+263-86-7700-4321"
-        }}
-      />
+      <ServiceStructuredData slug="threat-intelligence" />
     </>
   );
 }

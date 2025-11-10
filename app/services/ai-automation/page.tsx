@@ -76,7 +76,7 @@ export default function AIAutomationPage() {
         </div>
       </section>
       <CTA />
-      <ServiceStructuredData name="AI & Automation in Cyber Defense" description="AI-powered models that detect anomalies, automate log analysis, and predict threats in real time." provider="NexNet CyberLabs" areaServed={["Zimbabwe", "Poland", "Africa", "European Union"]} availableChannel={{ serviceUrl: "https://nexnet-cyberlabs.com/services/ai-automation", servicePhone: "+263-86-7700-4321" }} />
+      <ServiceStructuredData slug="ai-automation" />
     </>
   );
 }

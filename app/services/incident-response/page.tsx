@@ -221,16 +221,7 @@ export default function IncidentResponsePage() {
       </section>
 
       <CTA />
-      <ServiceStructuredData
-        name="Incident Response & Breach Management"
-        description="24/7 breach containment and triage with rapid response to minimize downtime and data loss."
-        provider="NexNet CyberLabs"
-        areaServed={["Zimbabwe", "Poland", "Africa", "European Union"]}
-        availableChannel={{
-          serviceUrl: "https://nexnet-cyberlabs.com/services/incident-response",
-          servicePhone: "+263-86-7700-4321"
-        }}
-      />
+      <ServiceStructuredData slug="incident-response" />
     </>
   );
 }

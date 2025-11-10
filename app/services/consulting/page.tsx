@@ -76,7 +76,7 @@ export default function ConsultingPage() {
         </div>
       </section>
       <CTA />
-      <ServiceStructuredData name="Cybersecurity Consulting & Strategy" description="Executive-level cybersecurity advisory turning technical defenses into business advantage." provider="NexNet CyberLabs" areaServed={["Zimbabwe", "Poland", "Africa", "European Union"]} availableChannel={{ serviceUrl: "https://nexnet-cyberlabs.com/services/consulting", servicePhone: "+263-86-7700-4321" }} />
+      <ServiceStructuredData slug="consulting" />
     </>
   );
 }

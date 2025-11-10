@@ -229,16 +229,7 @@ export default function GovernanceRiskCompliancePage() {
         </div>
       </section>
       <CTA />
-      <ServiceStructuredData
-        name="Governance, Risk & Compliance"
-        description="Navigate complex regulations with confidence. ISO 27001, GDPR, POPIA, and beyond."
-        provider="NexNet CyberLabs"
-        areaServed={["Zimbabwe", "Poland", "Africa", "European Union"]}
-        availableChannel={{
-          serviceUrl: "https://nexnet-cyberlabs.com/services/governance-risk-compliance",
-          servicePhone: "+263-86-7700-4321"
-        }}
-      />
+      <ServiceStructuredData slug="grc" />
     </>
   );
 }

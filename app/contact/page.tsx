@@ -38,7 +38,13 @@ const generalFields = [
     label: "Inquiry Type",
     type: "select" as const,
     required: true,
-    options: ["Consultation", "Partnership", "Media", "Academy", "Other"]
+    options: [
+      { value: "consultation", label: "Consultation" },
+      { value: "partnership", label: "Partnership" },
+      { value: "media", label: "Media" },
+      { value: "academy", label: "Academy" },
+      { value: "other", label: "Other" }
+    ]
   },
   { name: "message", label: "Message", type: "textarea" as const, required: true }
 ];
@@ -53,14 +59,26 @@ const incidentFields = [
     label: "Severity Level",
     type: "select" as const,
     required: true,
-    options: ["Critical - Ongoing Attack", "High - Systems Compromised", "Medium - Suspicious Activity", "Low - Security Question"]
+    options: [
+      { value: "critical", label: "Critical - Ongoing Attack" },
+      { value: "high", label: "High - Systems Compromised" },
+      { value: "medium", label: "Medium - Suspicious Activity" },
+      { value: "low", label: "Low - Security Question" }
+    ]
   },
   {
     name: "incidentType",
     label: "Incident Type",
     type: "select" as const,
     required: true,
-    options: ["Ransomware", "Business Email Compromise", "Data Breach", "Insider Threat", "DDoS Attack", "Other"]
+    options: [
+      { value: "ransomware", label: "Ransomware" },
+      { value: "bec", label: "Business Email Compromise" },
+      { value: "data-breach", label: "Data Breach" },
+      { value: "insider-threat", label: "Insider Threat" },
+      { value: "ddos", label: "DDoS Attack" },
+      { value: "other", label: "Other" }
+    ]
   },
   { name: "summary", label: "Incident Summary", type: "textarea" as const, required: true }
 ];
@@ -176,7 +194,7 @@ export default function ContactPage() {
                 <Form
                   fields={generalFields}
                   submitLabel="Send Message"
-                  onSubmit={(data) => {
+                  onSubmit={async (data) => {
                     console.log("General inquiry:", data);
                     alert("Thank you! We will respond within 2 hours.");
                   }}
@@ -198,7 +216,7 @@ export default function ContactPage() {
                 <Form
                   fields={incidentFields}
                   submitLabel="Escalate Incident"
-                  onSubmit={(data) => {
+                  onSubmit={async (data) => {
                     console.log("Incident report:", data);
                     alert("INCIDENT ESCALATED. Our team will contact you within 30 minutes.");
                   }}

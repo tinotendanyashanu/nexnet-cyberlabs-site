@@ -76,7 +76,7 @@ export default function CloudSecurityPage() {
         </div>
       </section>
       <CTA />
-      <ServiceStructuredData name="Cloud & Infrastructure Security" description="Assess and secure on-premise, cloud, and hybrid infrastructure with modern security standards." provider="NexNet CyberLabs" areaServed={["Zimbabwe", "Poland", "Africa", "European Union"]} availableChannel={{ serviceUrl: "https://nexnet-cyberlabs.com/services/cloud-security", servicePhone: "+263-86-7700-4321" }} />
+      <ServiceStructuredData slug="cloud-security" />
     </>
   );
 }

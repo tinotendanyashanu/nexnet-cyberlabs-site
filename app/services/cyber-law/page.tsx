@@ -76,7 +76,7 @@ export default function CyberLawPage() {
         </div>
       </section>
       <CTA />
-      <ServiceStructuredData name="Cyber Law & Policy Advisory" description="Work with policymakers to shape cyber laws and response frameworks aligned with global standards." provider="NexNet CyberLabs" areaServed={["Zimbabwe", "Poland", "Africa", "European Union"]} availableChannel={{ serviceUrl: "https://nexnet-cyberlabs.com/services/cyber-law", servicePhone: "+263-86-7700-4321" }} />
+      <ServiceStructuredData slug="cyber-law" />
     </>
   );
 }

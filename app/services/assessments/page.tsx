@@ -220,16 +220,7 @@ export default function AssessmentsPage() {
       </section>
 
       <CTA />
-      <ServiceStructuredData
-        name="Penetration Testing & Vulnerability Assessment"
-        description="Ethical hacking to identify and validate vulnerabilities across systems, networks, and applications."
-        provider="NexNet CyberLabs"
-        areaServed={["Zimbabwe", "Poland", "Africa", "European Union"]}
-        availableChannel={{
-          serviceUrl: "https://nexnet-cyberlabs.com/services/assessments",
-          servicePhone: "+263-86-7700-4321"
-        }}
-      />
+      <ServiceStructuredData slug="assessments" />
     </>
   );
 }

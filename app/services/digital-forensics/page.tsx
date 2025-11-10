@@ -211,16 +211,7 @@ export default function DigitalForensicsPage() {
         </div>
       </section>
       <CTA />
-      <ServiceStructuredData
-        name="Digital Forensics & Incident Response"
-        description="Enterprise-grade DFIR services with 24/7 availability, rapid containment, and court-admissible evidence handling."
-        provider="NexNet CyberLabs"
-        areaServed={["Zimbabwe", "Poland", "Africa", "European Union"]}
-        availableChannel={{
-          serviceUrl: "https://nexnet-cyberlabs.com/services/digital-forensics",
-          servicePhone: "+263-86-7700-4321"
-        }}
-      />
+      <ServiceStructuredData slug="digital-forensics" />
     </>
   );
 }

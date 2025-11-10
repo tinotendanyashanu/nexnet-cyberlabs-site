@@ -76,7 +76,7 @@ export default function ManagedDefensePage() {
         </div>
       </section>
       <CTA />
-      <ServiceStructuredData name="Managed Defense & Monitoring" description="Subscription-based managed defense with 24/7 monitoring, detection, and response." provider="NexNet CyberLabs" areaServed={["Zimbabwe", "Poland", "Africa", "European Union"]} availableChannel={{ serviceUrl: "https://nexnet-cyberlabs.com/services/managed-defense", servicePhone: "+263-86-7700-4321" }} />
+      <ServiceStructuredData slug="managed-defense" />
     </>
   );
 }

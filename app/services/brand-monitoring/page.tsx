@@ -220,16 +220,7 @@ export default function BrandMonitoringPage() {
       </section>
 
       <CTA />
-      <ServiceStructuredData
-        name="Brand & Digital Footprint Monitoring"
-        description="Monitor internet, dark web, and data leak markets for exposed credentials and confidential information."
-        provider="NexNet CyberLabs"
-        areaServed={["Zimbabwe", "Poland", "Africa", "European Union"]}
-        availableChannel={{
-          serviceUrl: "https://nexnet-cyberlabs.com/services/brand-monitoring",
-          servicePhone: "+263-86-7700-4321"
-        }}
-      />
+      <ServiceStructuredData slug="brand-monitoring" />
     </>
   );
 }
