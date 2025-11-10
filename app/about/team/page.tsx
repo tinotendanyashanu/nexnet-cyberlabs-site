@@ -9,17 +9,17 @@ export const metadata: Metadata = {
 
 const leadership = [
   {
-    name: "Tendai Moyo",
-    title: "Co-Founder & CEO",
-    location: "Harare, Zimbabwe",
-    bio: "Former incident responder with 8 years in financial services cybersecurity. Led containment of 50+ ransomware incidents across SADC region. Certified CISSP, GCFA, and CISM.",
-    focus: "Strategic direction, client relationships, regional expansion",
-    email: "tendai.moyo@nexnet.example",
-    linkedin: "linkedin.com/in/tendaimoyo",
-    avatar: "/images/team/tendai-moyo.jpg"
+    name: "Tinotenda Nyashanu",
+    title: "Co-Founder & Chief Executive Officer",
+    location: "Warsaw, Poland & Harare, Zimbabwe",
+    bio: "AI and Cybersecurity Engineer with a strong background in digital forensics, network defense, and intelligent systems design. Co-founder of NexNet CyberLabs, building Africa’s first world-class cybersecurity and intelligence bureau focused on ethical defense, research, and innovation.",
+    focus: "Strategic leadership, innovation, partnerships, and organizational development",
+    email: "tinotendanyash@gmail.com",
+    linkedin: "linkedin.com/in/tinotenda-nyashanu-90163712b",
+    avatar: "/images/team/tinotenda.png"
   },
   {
-    name: "Chipo Ncube",
+    name: "Nyasha Mutonhori",
     title: "Co-Founder & Chief Technology Officer",
     location: "Warsaw, Poland",
     bio: "Digital forensics expert with background in law enforcement cyber crime units. Published researcher on APT tactics in African infrastructure. GCFE, GREM, and EnCE certified.",
@@ -29,14 +29,14 @@ const leadership = [
     avatar: "/images/team/chipo-ncube.jpg"
   },
   {
-    name: "Rufaro Chikwanha",
+    name: "Nyasha Jaidi",
     title: "Co-Founder & Chief Operating Officer",
     location: "Harare, Zimbabwe",
-    bio: "Compliance and risk management specialist. Built GRC programs for 3 Fortune 500 companies. ISO 27001 Lead Auditor and Certified Information Privacy Professional (CIPP/E).",
-    focus: "Operations, compliance, quality assurance",
-    email: "rufaro.chikwanha@nexnet.example",
-    linkedin: "linkedin.com/in/rufarochikwanha",
-    avatar: "/images/team/rufaro-chikwanha.jpg"
+    bio: "Operations-driven cybersecurity professional with a background in Computer Engineering, specializing in Cybersecurity and Computer Networking. Currently pursuing an MBA to strengthen her leadership and strategic management expertise, blending technical insight with organizational acumen to drive efficiency and innovation. As Co-Founder and Chief Operating Officer of NexNet CyberLab, she oversees business operations, growth strategies, and administrative frameworks that keep the company agile and scalable. She is dedicated to building systems that empower teams and support sustainable success.",
+    focus: "Operations management, strategic planning, organizational efficiency, and quality assurance",
+    email: "nyasha.jaidi@nexnetcyberlab.com",
+    linkedin: "www.linkedin.com/in/nyasha-jaidi-51668521a",
+    avatar: "/images/team/nyasha.jpg"
   }
 ];
 
@@ -102,11 +102,19 @@ export default function TeamPage() {
             {leadership.map((leader) => (
               <article key={leader.name} className="card space-y-4">
                 <div className="relative w-32 h-32 mx-auto">
-                  <div className="w-32 h-32 bg-gradient-to-br from-brand-teal/20 to-brand-navy rounded-full flex items-center justify-center text-4xl font-bold text-brand-teal border-2 border-brand-teal/30">
-                    {leader.name.split(' ').map(n => n[0]).join('')}
-                  </div>
+                  {leader.avatar ? (
+                    <img
+                      src={leader.avatar}
+                      alt={`${leader.name} avatar`}
+                      className="w-32 h-32 rounded-full object-cover border-2 border-brand-teal/30"
+                    />
+                  ) : (
+                    <div className="w-32 h-32 bg-gradient-to-br from-brand-teal/20 to-brand-navy rounded-full flex items-center justify-center text-4xl font-bold text-brand-teal border-2 border-brand-teal/30">
+                      {leader.name.split(" ").map((n) => n[0]).join("")}
+                    </div>
+                  )}
                 </div>
-                
+
                 <div className="text-center">
                   <h3 className="text-xl font-bold">{leader.name}</h3>
                   <p className="text-brand-teal text-sm font-medium">{leader.title}</p>
@@ -117,22 +125,22 @@ export default function TeamPage() {
                 </div>
 
                 <p className="text-gray-300 text-sm leading-relaxed">{leader.bio}</p>
-                
+
                 <div className="pt-3 border-t border-white/10">
                   <p className="text-xs text-gray-400 mb-2">Focus areas:</p>
                   <p className="text-sm text-gray-300">{leader.focus}</p>
                 </div>
 
                 <div className="flex gap-3 pt-2">
-                  <a 
-                    href={`mailto:${leader.email}`} 
+                  <a
+                    href={`mailto:${leader.email}`}
                     className="flex items-center gap-2 text-sm text-brand-teal hover:underline"
                   >
                     <Mail className="w-4 h-4" />
                     Email
                   </a>
-                  <a 
-                    href={`https://${leader.linkedin}`} 
+                  <a
+                    href={`https://${leader.linkedin}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-sm text-brand-teal hover:underline"

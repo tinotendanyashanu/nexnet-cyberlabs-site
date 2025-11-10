@@ -9,29 +9,34 @@ export type NavLink = {
 
 export const servicesNav: NavLink[] = [
   {
+    href: "/services",
+    label: "All Services",
+    description: "Complete service catalog with 13 offerings"
+  },
+  {
+    href: "/services/incident-response",
+    label: "Incident Response",
+    description: "24/7 breach containment and management"
+  },
+  {
     href: "/services/digital-forensics",
     label: "Digital Forensics",
-    description: "Evidence collection, analysis, expert reporting"
+    description: "Court-admissible evidence and investigations"
   },
   {
     href: "/services/threat-intelligence",
     label: "Threat Intelligence",
-    description: "Strategic, operational, and tactical intel"
+    description: "OSINT and dark web monitoring"
   },
   {
-    href: "/services/governance-risk-compliance",
-    label: "Governance, Risk & Compliance",
-    description: "ISO 27001, SOC 2, GDPR/POPIA guidance"
+    href: "/services/grc",
+    label: "GRC",
+    description: "Governance, risk and compliance programs"
   },
   {
-    href: "/services/security-assessments",
-    label: "Security Assessments",
-    description: "Penetration testing and security reviews"
-  },
-  {
-    href: "/services/security-awareness-training",
-    label: "Security Awareness Training",
-    description: "Human risk reduction and culture building"
+    href: "/services/assessments",
+    label: "Penetration Testing",
+    description: "Security assessments and vulnerability testing"
   }
 ];
 

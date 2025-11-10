@@ -10,7 +10,7 @@ import clsx from "clsx";
 const navigation = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/services/digital-forensics", label: "Services" },
+  { href: "/services", label: "Services" },
   { href: "/industries", label: "Industries" },
   { href: "/academy", label: "Academy" },
   { href: "/insights", label: "Insights" },
